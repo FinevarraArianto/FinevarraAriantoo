@@ -5,12 +5,232 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #490916, #8e2636);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 25px 15px;
+    line-height: 1.7;
+}
+
+/* ===== CONTAINER WEBSITE ===== */
+table {
+    width: 90%;
+    max-width: 1000px;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+}
+
+td {
+    border: none;
+    padding: 25px;
+}
+
+/* ===== HEADER ===== */
+table > tbody > tr:first-child > td {
+    background: linear-gradient(135deg, #650d1b, #9c3445);
+    text-align: center;
+    padding: 25px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+table > tbody > tr:first-child p {
+    color: #f4d9b3;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+/* ===== NAVIGATION MENU ===== */
+table > tbody > tr:nth-child(2) > td {
+    background: #f8f3ec;
+    text-align: center;
+    padding: 18px;
+    border-bottom: 2px solid #d6ad69;
+}
+
+table > tbody > tr:nth-child(2) a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+table > tbody > tr:nth-child(2) a font {
+    color: #650d1b;
+    font-weight: bold;
+}
+
+table > tbody > tr:nth-child(2) a:hover {
+    background: #650d1b;
+    transform: translateY(-3px);
+}
+
+table > tbody > tr:nth-child(2) a:hover font {
+    color: white;
+}
+
+/* ===== MAIN CONTENT ===== */
+table > tbody > tr:nth-child(3) > td:first-child {
+    background: #ffffff;
+    padding: 35px;
+    vertical-align: top;
+}
+
+h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    color: #650d1b;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+small {
+    color: #888;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #e6d6d6;
+    margin: 35px 0;
+}
+
+/* ===== LINK SELANJUTNYA ===== */
+td:first-child p a {
+    display: inline-block;
+    background: #650d1b;
+    color: white;
+    padding: 9px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+td:first-child p a:hover {
+    background: #a34353;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(101,13,27,0.2);
+}
+
+/* ===== SIDEBAR ===== */
+table > tbody > tr:nth-child(3) > td:last-child {
+    background: #f8f3ec;
+    border-left: 1px solid #eadede;
+    padding: 25px;
+}
+
+table > tbody > tr:nth-child(3) > td:last-child p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #650d1b;
+    border-bottom: 2px solid #d6ad69;
+    padding-bottom: 10px;
+}
+
+ol {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 14px;
+    color: #650d1b;
+}
+
+li a {
+    color: #650d1b;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+li a:hover {
+    color: #b66a40;
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+table > tbody > tr:last-child > td {
+    background: #350711;
+    text-align: center;
+    padding: 18px;
+}
+
+table > tbody > tr:last-child small {
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    td {
+        padding: 15px;
+    }
+
+    table > tbody > tr:nth-child(3) > td {
+        display: block;
+        width: 100%;
+    }
+
+    table > tbody > tr:nth-child(3) > td:last-child {
+        border-left: none;
+        border-top: 2px solid #d6ad69;
+    }
+
+    table > tbody > tr:nth-child(2) a {
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
     </style>
 </head>
 
 <body bgcolor="maroon">
 
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
+  
 
     <p>&nbsp;</p>
 
