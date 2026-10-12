@@ -123,34 +123,64 @@ table > tbody > tr:first-child > td.header-banner {
     }
 }
 
+
 /* ===== NAVIGATION MENU ===== */
 table > tbody > tr:nth-child(2) > td {
     background: #f8f3ec;
     text-align: center;
-    padding: 18px;
+    padding: 22px 12px;
     border-bottom: 2px solid #d6ad69;
 }
 
+/* ===== TOMBOL MENU ===== */
 table > tbody > tr:nth-child(2) a {
-    text-decoration: none;
     display: inline-block;
-    padding: 8px 15px;
-    border-radius: 8px;
+    background: linear-gradient(145deg, #8e2636, #650d1b);
+    padding: 12px 20px;
+    margin: 5px 7px;
+    border-radius: 10px;
+    border: 1px solid #d6ad69;
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+
+    box-shadow:
+        0 4px 0 #350711,
+        0 7px 12px rgba(0,0,0,0.25);
+
     transition: all 0.3s ease;
 }
 
+/* ===== WARNA TEKS ===== */
 table > tbody > tr:nth-child(2) a font {
-    color: #650d1b;
-    font-weight: bold;
-}
-
-table > tbody > tr:nth-child(2) a:hover {
-    background: #650d1b;
-    transform: translateY(-3px);
-}
-
-table > tbody > tr:nth-child(2) a:hover font {
     color: white;
+}
+
+/* ===== EFEK HOVER ===== */
+table > tbody > tr:nth-child(2) a:hover {
+    background: linear-gradient(145deg, #b44b5e, #8e2636);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 0 #350711,
+        0 10px 18px rgba(0,0,0,0.3);
+}
+
+/* ===== EFEK SAAT DIKLIK ===== */
+table > tbody > tr:nth-child(2) a:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #350711;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    table > tbody > tr:nth-child(2) a {
+        padding: 10px 12px;
+        font-size: 12px;
+        margin: 5px 3px;
+    }
 }
 
 /* ===== MAIN CONTENT ===== */
