@@ -38,26 +38,23 @@ td {
 }
 
 /* ===== HEADER ===== */
-table > tbody > tr:first-child > td {
-    background: linear-gradient(135deg, #650d1b, #9c3445);
-    text-align: center;
-    padding: 25px;
+/* HEADER MENGGUNAKAN GAMBAR */
+body > table > tbody > tr:first-child > td {
+    padding: 0;
+    background: transparent;
+    line-height: 0;
 }
 
-h1 {
-    font-family: Georgia, serif;
-    font-size: 38px;
-    letter-spacing: 2px;
-    color: #ffffff;
-    margin: 5px 0;
+body > table > tbody > tr:first-child img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
 }
-
-table > tbody > tr:first-child p {
-    color: #f4d9b3;
-    font-size: 15px;
-    letter-spacing: 2px;
-}
-
 /* ===== NAVIGATION MENU ===== */
 table > tbody > tr:nth-child(2) > td {
     background: #f8f3ec;
