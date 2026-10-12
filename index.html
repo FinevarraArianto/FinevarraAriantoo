@@ -38,23 +38,83 @@ td {
 }
 
 /* ===== HEADER ===== */
-/* HEADER MENGGUNAKAN GAMBAR */
-body > table > tbody > tr:first-child > td {
+table > tbody > tr:first-child > td.header-banner {
+    position: relative;
     padding: 0;
-    background: transparent;
-    line-height: 0;
+    height: 220px;
+    overflow: hidden;
+    background: #650d1b;
 }
 
-body > table > tbody > tr:first-child img {
+/* ===== GAMBAR BANNER ===== */
+.header-banner img {
     display: block;
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-    transform: none;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
 }
+
+/* ===== POSISI TEKS ===== */
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ===== JUDUL WEBSITE ===== */
+.header-text h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff0d6;
+    margin: 0;
+
+    text-shadow:
+        2px 2px 3px #350711,
+        4px 4px 8px rgba(0,0,0,0.8),
+        0 0 15px rgba(255,220,170,0.5);
+}
+
+/* ===== SUBTITLE ===== */
+.header-text p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #f4d9b3;
+    margin-top: 12px;
+
+    text-shadow:
+        2px 2px 5px rgba(0,0,0,0.9);
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 600px) {
+    table > tbody > tr:first-child > td.header-banner {
+        height: 160px;
+    }
+
+    .header-banner img {
+        height: 160px;
+    }
+
+    .header-text h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    .header-text p {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+
 /* ===== NAVIGATION MENU ===== */
 table > tbody > tr:nth-child(2) > td {
     background: #f8f3ec;
@@ -233,12 +293,19 @@ table > tbody > tr:last-child small {
 
     <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="maroon">
 
-        <!-- HEADER -->
-       <tr>
-    <td colspan="2" align="center">
-        <img src="banner.jpg" alt="Website Finevarra">
+    
+<!-- HEADER -->
+<tr>
+    <td colspan="2" class="header-banner">
+        <img src="banner.jpg" alt="Banner Website Finevarra">
+
+        <div class="header-text">
+            <h1>Website Finevarra</h1>
+            <p>things about me.</p>
+        </div>
     </td>
 </tr>
+
         <!-- MENU -->
         <tr>
             <td colspan="2" bgcolor="white">
