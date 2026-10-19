@@ -1,290 +1,463 @@
+
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <title>Beranda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sekolahku</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-<style>
-/* ===== GLOBAL ===== */
-* {
-    box-sizing: border-box;
-}
 
-body {
-    background: linear-gradient(135deg, #490916, #8e2636);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 25px 15px;
-    line-height: 1.7;
-}
+    <style>
 
-/* ===== CONTAINER WEBSITE ===== */
-body > table {
-    width: 90%;
-    max-width: 1000px;
-    border: none;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 18px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
-}
+        /* ===== GLOBAL ===== */
+        * {
+            box-sizing: border-box;
+        }
 
-td {
-    border: none;
-    padding: 25px;
-}
+        body {
+            background: linear-gradient(135deg, #490916, #8e2636);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 25px 15px;
+            line-height: 1.7;
+        }
 
-/* ===== HEADER ===== */
-body > table > tbody > tr:first-child > td {
-    background: linear-gradient(135deg, #650d1b, #9c3445);
-    text-align: center;
-    padding: 25px;
-}
 
-h1 {
-    font-family: Georgia, serif;
-    font-size: 38px;
-    letter-spacing: 2px;
-    color: white;
-    margin: 5px 0;
-}
+        /* ===== CONTAINER WEBSITE ===== */
+        .website-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: none;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+        }
 
-body > table > tbody > tr:first-child p {
-    color: #f4d9b3;
-    font-size: 15px;
-    letter-spacing: 2px;
-}
+        td {
+            border: none;
+            padding: 25px;
+        }
 
-/* ===== NAVIGATION MENU ===== */
-body > table > tbody > tr:nth-child(2) > td {
-    background: #f8f3ec;
-    text-align: center;
-    padding: 18px;
-    border-bottom: 2px solid #d6ad69;
-}
 
-body > table > tbody > tr:nth-child(2) a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 8px;
-    color: #650d1b;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, #650d1b, #9c3445);
+            text-align: center;
+            padding: 35px 25px;
+        }
 
-body > table > tbody > tr:nth-child(2) a:hover {
-    background: #650d1b;
-    color: white;
-    transform: translateY(-3px);
-}
 
-/* ===== MAIN CONTENT ===== */
-body > table > tbody > tr:nth-child(3) > td:first-child {
-    background: #ffffff;
-    padding: 35px;
-    vertical-align: top;
-}
+        /* ===== JUDUL WEBSITE ===== */
+        .header h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            letter-spacing: 2px;
+            color: white;
+            margin: 5px 0;
+        }
 
-h3 {
-    font-family: Georgia, serif;
-    font-size: 27px;
-    color: #650d1b;
-    line-height: 1.4;
-    margin-bottom: 12px;
-    border-left: 4px solid #d6ad69;
-    padding-left: 15px;
-}
 
-p {
-    font-size: 15px;
-    line-height: 1.9;
-    text-align: justify;
-}
+        /* ===== SUBTITLE ===== */
+        .header p {
+            color: #f4d9b3;
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin: 10px 0;
+            text-align: center;
+        }
 
-small {
-    color: #888;
-}
 
-/* ===== GAMBAR SEKOLAH ===== */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
+        /* ===== NAVIGATION MENU ===== */
+        .navigation {
+            background: #f8f3ec;
+            text-align: center;
+            padding: 18px;
+            border-bottom: 2px solid #d6ad69;
+        }
 
-img:hover {
-    transform: scale(1.02);
-}
 
-center {
-    display: block;
-    margin: 25px auto;
-}
+        /* ===== TOMBOL MENU ===== */
+        .navigation a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 3px;
+            border-radius: 8px;
+            color: #650d1b;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
 
-center p {
-    font-size: 13px;
-    color: #777;
-    font-style: italic;
-    text-align: right;
-}
 
-/* ===== SIDEBAR ===== */
-body > table > tbody > tr:nth-child(3) > td:last-child {
-    background: #f8f3ec;
-    border-left: 1px solid #eadede;
-    padding: 25px;
-}
+        /* ===== EFEK HOVER MENU ===== */
+        .navigation a:hover {
+            background: #650d1b;
+            color: white;
+            transform: translateY(-3px);
+        }
 
-body > table > tbody > tr:nth-child(3) > td:last-child > p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #650d1b;
-    border-bottom: 2px solid #d6ad69;
-    padding-bottom: 10px;
-    text-align: left;
-}
 
-ol {
-    padding-left: 22px;
-}
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            width: 75%;
+            background: #ffffff;
+            padding: 35px;
+            vertical-align: top;
+        }
 
-li {
-    margin-bottom: 14px;
-    color: #650d1b;
-}
 
-li a {
-    color: #650d1b;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
+        /* ===== JUDUL ARTIKEL ===== */
+        .main-content h3 {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            color: #650d1b;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            border-left: 4px solid #d6ad69;
+            padding-left: 15px;
+        }
 
-li a:hover {
-    color: #b66a40;
-    text-decoration: underline;
-}
 
-/* ===== FOOTER ===== */
-body > table > tbody > tr:last-child > td {
-    background: #350711;
-    text-align: center;
-    padding: 18px;
-}
+        /* ===== PARAGRAF ===== */
+        .main-content p {
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: justify;
+        }
 
-body > table > tbody > tr:last-child small {
-    color: white;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
+        /* ===== TANGGAL ARTIKEL ===== */
+        .article-date {
+            text-align: right !important;
+        }
 
-    body > table {
-        width: 100%;
-    }
+        small {
+            color: #888;
+        }
 
-    h1 {
-        font-size: 26px;
-    }
 
-    td {
-        padding: 15px;
-    }
+        /* ===== GAMBAR SEKOLAH ===== */
+        .school-image {
+            display: block;
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            border-radius: 12px;
+            margin: 20px auto 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
 
-    body > table > tbody > tr:nth-child(3) > td {
-        display: block;
-        width: 100%;
-    }
 
-    body > table > tbody > tr:nth-child(3) > td:last-child {
-        border-left: none;
-        border-top: 2px solid #d6ad69;
-    }
+        /* ===== EFEK HOVER GAMBAR ===== */
+        .school-image:hover {
+            transform: scale(1.02);
+        }
 
-    body > table > tbody > tr:nth-child(2) a {
-        padding: 6px;
-        font-size: 13px;
-    }
 
-    h3 {
-        font-size: 22px;
-    }
-}
-</style>
+        /* ===== KETERANGAN GAMBAR ===== */
+        .image-caption {
+            font-size: 13px !important;
+            color: #777;
+            font-style: italic;
+            text-align: right !important;
+            margin-top: 10px;
+        }
 
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            width: 25%;
+            background: #f8f3ec;
+            border-left: 1px solid #eadede;
+            padding: 25px;
+            vertical-align: top;
+        }
+
+
+        /* ===== JUDUL SIDEBAR ===== */
+        .sidebar p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #650d1b;
+            border-bottom: 2px solid #d6ad69;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+
+
+        /* ===== DAFTAR TAUTAN ===== */
+        .sidebar ol {
+            padding-left: 22px;
+        }
+
+        .sidebar li {
+            margin-bottom: 14px;
+            color: #650d1b;
+        }
+
+        .sidebar li a {
+            color: #650d1b;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+
+        /* ===== EFEK HOVER TAUTAN ===== */
+        .sidebar li a:hover {
+            color: #b66a40;
+            text-decoration: underline;
+        }
+
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #350711;
+            text-align: center;
+            padding: 18px;
+        }
+
+        .footer small {
+            color: white;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+
+        /* ===== RESPONSIVE MOBILE ===== */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .website-container {
+                width: 100%;
+            }
+
+            td {
+                padding: 15px;
+            }
+
+            /* HEADER MOBILE */
+            .header {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .header p {
+                font-size: 13px;
+            }
+
+            /* NAVIGATION MOBILE */
+            .navigation a {
+                padding: 6px;
+                font-size: 13px;
+            }
+
+            /* CONTENT MOBILE */
+            .main-content,
+            .sidebar {
+                display: block;
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .main-content h3 {
+                font-size: 22px;
+            }
+
+            /* GAMBAR MOBILE */
+            .school-image {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            /* SIDEBAR MOBILE */
+            .sidebar {
+                border-left: none;
+                border-top: 2px solid #d6ad69;
+            }
+
+        }
+
+    </style>
 </head>
 
-<body bgcolor="maroon" background="images/background.svg">
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
-    <p>&nbsp;</p>
-    <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
+
+<body>
+
+    <!-- ===== CONTAINER WEBSITE ===== -->
+    <table class="website-container">
+
+
+        <!-- ===== HEADER ===== -->
         <tr>
-            <td colspan="2" align="center" bgcolor="white">
-                <font color="black">
-                    <p>&nbsp;</p>
-                    <h1>Website Finevarra</h1>
-                    <p><em> things about me.</em></p>
-                    <p>&nbsp;</p>
-                </font>
+            <td colspan="2" class="header">
+
+                <h1>Website Finevarra</h1>
+
+                <p>
+                    <em>things about me.</em>
+                </p>
+
             </td>
         </tr>
+
+
+        <!-- ===== MENU NAVIGASI ===== -->
         <tr>
-            <td colspan="2" bgcolor="white">
-                <a href="index.html">Beranda</a> |
-                <a href="tentang-saya.html">Tentang Saya</a> |
-                <a href="sekolah-ku.html">Sekolahku</a> |
+            <td colspan="2" class="navigation">
+
+                <a href="index.html">Beranda</a>
+
+                <a href="tentang-saya.html">Tentang Saya</a>
+
+                <a href="sekolah-ku.html">Sekolahku</a>
+
                 <a href="syair-lagu.html">Syair Lagu</a>
+
             </td>
         </tr>
+
+
+        <!-- ===== ISI WEBSITE ===== -->
         <tr>
-            <td width="75%">
-                <!-- Content utama -->
 
-                
-                <h3>Sekolah ku</h3>
-                <p align="right"><small><em>Senin, 8 September 2026</em></small></p>
-                <P>SMKN 1 Tangerang merupakan salah satu sekolah menengah kejuruan yang berada di Kota Tangerang, Provinsi Banten. Sekolah ini menyediakan pendidikan kejuruan yang bertujuan untuk membekali siswa dengan pengetahuan, keterampilan, serta pengalaman yang sesuai dengan bidang keahlian masing-masing.<P>
-                 <P>SMKN 1 Tangerang memiliki beberapa program keahlian yang dapat menjadi pilihan siswa untuk mengembangkan minat dan kemampuan mereka. Salah satunya adalah Desain Komunikasi Visual (DKV), yang mempelajari berbagai hal dalam bidang desain, komunikasi visual, multimedia, dan pembuatan konten kreatif.<P> 
-                   <P>Selain kegiatan pembelajaran di kelas, siswa juga dapat mengembangkan kemampuan melalui berbagai kegiatan sekolah, organisasi, ekstrakurikuler, serta kegiatan lainnya. Dengan lingkungan belajar yang mendukung, SMKN 1 Tangerang menjadi tempat bagi siswa untuk mengembangkan keterampilan, kreativitas, kedisiplinan, dan mempersiapkan diri untuk melanjutkan pendidikan maupun memasuki dunia kerja.<P>
-                
-                <center>
-                <img src="gambar-pertama.jpg" width="400">
-                    <p align="right"><small><em>DKV Angkatan 03/04/05</em></small></p>
-                    </center>
-            
+            <!-- ===== CONTENT UTAMA ===== -->
+            <td class="main-content">
 
-                <!-- Akhir dari content utama -->
+                <h3>Sekolahku</h3>
+
+                <p class="article-date">
+                    <small>
+                        <em>Senin, 8 September 2026</em>
+                    </small>
+                </p>
+
+
+                <!-- ===== PARAGRAF PERTAMA ===== -->
+                <p>
+                    SMKN 1 Tangerang merupakan salah satu sekolah
+                    menengah kejuruan yang berada di Kota Tangerang,
+                    Provinsi Banten. Sekolah ini menyediakan pendidikan
+                    kejuruan yang bertujuan untuk membekali siswa
+                    dengan pengetahuan, keterampilan, serta pengalaman
+                    yang sesuai dengan bidang keahlian masing-masing.
+                </p>
+
+
+                <!-- ===== PARAGRAF KEDUA ===== -->
+                <p>
+                    SMKN 1 Tangerang memiliki beberapa program keahlian
+                    yang dapat menjadi pilihan siswa untuk mengembangkan
+                    minat dan kemampuan mereka. Salah satunya adalah
+                    Desain Komunikasi Visual (DKV), yang mempelajari
+                    berbagai hal dalam bidang desain, komunikasi visual,
+                    multimedia, dan pembuatan konten kreatif.
+                </p>
+
+
+                <!-- ===== PARAGRAF KETIGA ===== -->
+                <p>
+                    Selain kegiatan pembelajaran di kelas, siswa juga
+                    dapat mengembangkan kemampuan melalui berbagai
+                    kegiatan sekolah, organisasi, ekstrakurikuler,
+                    serta kegiatan lainnya.
+
+                    Dengan lingkungan belajar yang mendukung,
+                    SMKN 1 Tangerang menjadi tempat bagi siswa
+                    untuk mengembangkan keterampilan, kreativitas,
+                    kedisiplinan, dan mempersiapkan diri untuk
+                    melanjutkan pendidikan maupun memasuki dunia kerja.
+                </p>
+
+
+                <!-- ===== GAMBAR SEKOLAH ===== -->
+                <figure>
+
+                    <img
+                        src="gambar-pertama.jpg"
+                        alt="DKV SMKN 1 Tangerang"
+                        class="school-image"
+                    >
+
+                    <figcaption class="image-caption">
+                        DKV Angkatan 03/04/05
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- ===== AKHIR CONTENT UTAMA ===== -->
+
             </td>
-            <td width="25%" valign="top" bgcolor="white">
+
+
+            <!-- ===== SIDEBAR ===== -->
+            <td class="sidebar">
+
                 <p>Tautan eksternal</p>
-                <ol>
-                    <li><a href="https://zivanka223.github.io/">Website Finevarra</a></li>
-                    <li><a href="https://www.github.com">Github</a></li>
-                    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
-                    <li><a href="https://www.w3schools.com">W3Schools</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="right" bgcolor="black">
-                <font color="white"><small>&copy; Finevarra Aulya Naianisya Arianto., 2026.</small></font>
-            </td>
-        </tr>
-    </table>
-    <p>&nbsp;</p>
-</body>
 
+                <ol>
+
+                    <li>
+                        <a href="https://finevarraarianto.github.io/FinevarraAriantoo/">
+                            Website Finevarra
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.github.com">
+                            Github
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.wikipedia.org">
+                            Wikipedia
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.w3schools.com">
+                            W3Schools
+                        </a>
+                    </li>
+
+                </ol>
+
+            </td>
+
+        </tr>
+
+
+        <!-- ===== FOOTER ===== -->
+        <tr>
+            <td colspan="2" class="footer">
+
+                <small>
+                    &copy; Finevarra Aulya Naianisya Arianto, 2026.
+                </small>
+
+            </td>
+        </tr>
+
+    </table>
+
+</body>
 </html>
