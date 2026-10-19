@@ -1,303 +1,413 @@
+
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <title>Beranda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syair Lagu</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-<style>
-/* ===== GLOBAL ===== */
-* {
-    box-sizing: border-box;
-}
 
-body {
-    background: linear-gradient(135deg, #490916, #8e2636);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 25px 15px;
-    line-height: 1.7;
-}
+    <style>
 
-/* ===== CONTAINER WEBSITE ===== */
-body > table {
-    width: 90%;
-    max-width: 1000px;
-    border: none;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 18px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
-}
+        /* ===== GLOBAL ===== */
+        * {
+            box-sizing: border-box;
+        }
 
-td {
-    border: none;
-    padding: 25px;
-}
+        body {
+            background: linear-gradient(135deg, #490916, #8e2636);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 25px 15px;
+            line-height: 1.7;
+        }
 
-/* ===== HEADER ===== */
-body > table > tbody > tr:first-child > td {
-    background: linear-gradient(135deg, #650d1b, #9c3445);
-    text-align: center;
-    padding: 25px;
-}
 
-h1 {
-    font-family: Georgia, serif;
-    font-size: 38px;
-    letter-spacing: 2px;
-    color: white;
-    margin: 5px 0;
-}
+        /* ===== CONTAINER WEBSITE ===== */
+        .website-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: none;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+        }
 
-body > table > tbody > tr:first-child p {
-    color: #f4d9b3;
-    font-size: 15px;
-    letter-spacing: 2px;
-}
+        td {
+            border: none;
+            padding: 25px;
+        }
 
-/* ===== NAVIGATION MENU ===== */
-body > table > tbody > tr:nth-child(2) > td {
-    background: #f8f3ec;
-    text-align: center;
-    padding: 18px;
-    border-bottom: 2px solid #d6ad69;
-}
 
-body > table > tbody > tr:nth-child(2) a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 8px;
-    color: #650d1b;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, #650d1b, #9c3445);
+            text-align: center;
+            padding: 35px 25px;
+        }
 
-body > table > tbody > tr:nth-child(2) a:hover {
-    background: #650d1b;
-    color: white;
-    transform: translateY(-3px);
-}
 
-/* ===== MAIN CONTENT ===== */
-body > table > tbody > tr:nth-child(3) > td:first-child {
-    background: #ffffff;
-    padding: 35px;
-    vertical-align: top;
-}
+        /* ===== JUDUL WEBSITE ===== */
+        .header h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            letter-spacing: 2px;
+            color: white;
+            margin: 5px 0;
+        }
 
-h3 {
-    font-family: Georgia, serif;
-    font-size: 29px;
-    color: #650d1b;
-    line-height: 1.4;
-    margin-bottom: 12px;
-    border-left: 4px solid #d6ad69;
-    padding-left: 15px;
-}
 
-/* ===== LIRIK LAGU ===== */
-body > table > tbody > tr:nth-child(3) > td:first-child > p {
-    font-size: 16px;
-    line-height: 2;
-    color: #4d3b3e;
-    margin: 24px 0;
-}
+        /* ===== SUBTITLE ===== */
+        .header p {
+            color: #f4d9b3;
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin: 10px 0;
+            text-align: center;
+        }
 
-blockquote {
-    background: #f8f3ec;
-    border-left: 4px solid #d6ad69;
-    border-radius: 0 12px 12px 0;
-    padding: 15px 25px;
-    margin: 25px 0 25px 20px;
-    font-style: italic;
-}
 
-blockquote p {
-    color: #650d1b;
-    font-size: 16px;
-    line-height: 2;
-    margin: 5px 0;
-}
+        /* ===== NAVIGATION MENU ===== */
+        .navigation {
+            background: #f8f3ec;
+            text-align: center;
+            padding: 18px;
+            border-bottom: 2px solid #d6ad69;
+        }
 
-small {
-    color: #888;
-}
 
-/* ===== GAMBAR LAGU ===== */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
+        /* ===== TOMBOL MENU ===== */
+        .navigation a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 3px;
+            border-radius: 8px;
+            color: #650d1b;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
 
-img:hover {
-    transform: scale(1.02);
-}
 
-center {
-    display: block;
-    margin: 30px auto;
-}
+        /* ===== EFEK HOVER MENU ===== */
+        .navigation a:hover {
+            background: #650d1b;
+            color: white;
+            transform: translateY(-3px);
+        }
 
-center p {
-    font-size: 13px;
-    color: #777;
-    font-style: italic;
-}
 
-/* ===== SIDEBAR ===== */
-body > table > tbody > tr:nth-child(3) > td:last-child {
-    background: #f8f3ec;
-    border-left: 1px solid #eadede;
-    padding: 25px;
-}
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            width: 75%;
+            background: #ffffff;
+            padding: 35px;
+            vertical-align: top;
+        }
 
-body > table > tbody > tr:nth-child(3) > td:last-child > p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #650d1b;
-    border-bottom: 2px solid #d6ad69;
-    padding-bottom: 10px;
-}
 
-ol {
-    padding-left: 22px;
-}
+        /* ===== JUDUL LAGU ===== */
+        .main-content h3 {
+            font-family: Georgia, serif;
+            font-size: 29px;
+            color: #650d1b;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            border-left: 4px solid #d6ad69;
+            padding-left: 15px;
+        }
 
-li {
-    margin-bottom: 14px;
-    color: #650d1b;
-}
 
-li a {
-    color: #650d1b;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
+        /* ===== TANGGAL ARTIKEL ===== */
+        .article-date {
+            text-align: right;
+            margin-bottom: 25px;
+        }
 
-li a:hover {
-    color: #b66a40;
-    text-decoration: underline;
-}
+        small {
+            color: #888;
+        }
 
-/* ===== FOOTER ===== */
-body > table > tbody > tr:last-child > td {
-    background: #350711;
-    text-align: center;
-    padding: 18px;
-}
 
-body > table > tbody > tr:last-child small {
-    color: white;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
+        /* ===== LIRIK LAGU ===== */
+        .lyrics p {
+            font-size: 16px;
+            line-height: 2;
+            color: #4d3b3e;
+            margin: 24px 0;
+        }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
 
-    body > table {
-        width: 100%;
-    }
+        /* ===== KOTAK LIRIK ===== */
+        .lyrics blockquote {
+            background: #f8f3ec;
+            border-left: 4px solid #d6ad69;
+            border-radius: 0 12px 12px 0;
+            padding: 15px 25px;
+            margin: 25px 0 25px 20px;
+            font-style: italic;
+        }
 
-    h1 {
-        font-size: 26px;
-    }
+        .lyrics blockquote p {
+            color: #650d1b;
+            font-size: 16px;
+            line-height: 2;
+            margin: 5px 0;
+        }
 
-    td {
-        padding: 15px;
-    }
 
-    body > table > tbody > tr:nth-child(3) > td {
-        display: block;
-        width: 100%;
-    }
+        /* ===== GAMBAR LAGU ===== */
+        .song-image {
+            display: block;
+            width: 400px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 20px auto 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
 
-    body > table > tbody > tr:nth-child(3) > td:last-child {
-        border-left: none;
-        border-top: 2px solid #d6ad69;
-    }
 
-    body > table > tbody > tr:nth-child(2) a {
-        padding: 6px;
-        font-size: 13px;
-    }
+        /* ===== EFEK HOVER GAMBAR ===== */
+        .song-image:hover {
+            transform: scale(1.02);
+        }
 
-    h3 {
-        font-size: 22px;
-    }
 
-    blockquote {
-        margin-left: 0;
-        padding: 12px 18px;
-    }
-}
-</style>
+        /* ===== KETERANGAN GAMBAR ===== */
+        .image-caption {
+            font-size: 13px;
+            color: #777;
+            font-style: italic;
+            text-align: right;
+            margin-top: 10px;
+        }
 
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            width: 25%;
+            background: #f8f3ec;
+            border-left: 1px solid #eadede;
+            padding: 25px;
+            vertical-align: top;
+        }
+
+
+        /* ===== JUDUL SIDEBAR ===== */
+        .sidebar > p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #650d1b;
+            border-bottom: 2px solid #d6ad69;
+            padding-bottom: 10px;
+        }
+
+
+        /* ===== DAFTAR TAUTAN ===== */
+        .sidebar ol {
+            padding-left: 22px;
+        }
+
+        .sidebar li {
+            margin-bottom: 14px;
+            color: #650d1b;
+        }
+
+        .sidebar li a {
+            color: #650d1b;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+
+        /* ===== EFEK HOVER TAUTAN ===== */
+        .sidebar li a:hover {
+            color: #b66a40;
+            text-decoration: underline;
+        }
+
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #350711;
+            text-align: center;
+            padding: 18px;
+        }
+
+        .footer small {
+            color: white;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+
+        /* ===== RESPONSIVE MOBILE ===== */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .website-container {
+                width: 100%;
+            }
+
+            td {
+                padding: 15px;
+            }
+
+            /* HEADER MOBILE */
+            .header {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .header p {
+                font-size: 13px;
+            }
+
+            /* NAVIGATION MOBILE */
+            .navigation a {
+                padding: 6px;
+                font-size: 13px;
+            }
+
+            /* CONTENT MOBILE */
+            .main-content,
+            .sidebar {
+                display: block;
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .main-content h3 {
+                font-size: 22px;
+            }
+
+            /* LIRIK MOBILE */
+            .lyrics p {
+                font-size: 14px;
+            }
+
+            .lyrics blockquote {
+                margin-left: 0;
+                padding: 12px 18px;
+            }
+
+            .lyrics blockquote p {
+                font-size: 14px;
+            }
+
+            /* GAMBAR MOBILE */
+            .song-image {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            /* SIDEBAR MOBILE */
+            .sidebar {
+                border-left: none;
+                border-top: 2px solid #d6ad69;
+            }
+
+        }
+
+    </style>
 </head>
 
-<body bgcolor="maroon" background="images/background.svg">
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
-    <p>&nbsp;</p>
-    <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
+
+<body>
+
+    <!-- ===== CONTAINER WEBSITE ===== -->
+    <table class="website-container">
+
+
+        <!-- ===== HEADER ===== -->
         <tr>
-            <td colspan="2" align="center" bgcolor="white">
-                <font color="black">
-                    <p>&nbsp;</p>
-                    <h1>Website Finevarra</h1>
-                    <p><em>things about me.</em></p>
-                    <p>&nbsp;</p>
-                </font>
+            <td colspan="2" class="header">
+
+                <h1>Website Finevarra</h1>
+
+                <p>
+                    <em>things about me.</em>
+                </p>
+
             </td>
         </tr>
+
+
+        <!-- ===== MENU NAVIGASI ===== -->
         <tr>
-            <td colspan="2" bgcolor="white">
-                <a href="index.html">Beranda</a> |
-                <a href="about-me.html">Tentang Saya</a> |
-                <a href="sekolah.html">Sekolahku</a> |
+            <td colspan="2" class="navigation">
+
+                <a href="index.html">Beranda</a>
+
+                <a href="about-me.html">Tentang Saya</a>
+
+                <a href="sekolah.html">Sekolahku</a>
+
                 <a href="syair-lagu.html">Syair Lagu</a>
+
             </td>
         </tr>
+
+
+        <!-- ===== ISI WEBSITE ===== -->
         <tr>
-            <td width="75%">
-                <!-- Content utama -->
 
-                
+            <!-- ===== CONTENT UTAMA ===== -->
+            <td class="main-content">
+
                 <h3>All I Need To Hear</h3>
-                <p align="right"><small><em>Jumat, 25 September 2026</em></small></p>
 
-<!-- Bait 1 -->
-<p>
-    I get out my records<br>
+                <p class="article-date">
+                    <small>
+                        <em>Jumat, 25 September 2026</em>
+                    </small>
+                </p>
+
+
+                <!-- ===== LIRIK LAGU ===== -->
+                <div class="lyrics">
+
+                    <!-- BAIT 1 -->
+                    <p>
+                        I get out my records<br>
                         When you go away<br>
                         When people are talking<br>
                         I miss what they say
-</p>
-
-<!-- Bait 2 (Pre-Chorus): Menjorok ke dalam -->
-<blockquote>
-   <p>
-                        'Cause it all means nothing, my dear<br>
-                        If I can't be holding you near<br>
-                        So tell me you love me<br>
-                        'Cause that's all that I need to hear
                     </p>
-</blockquote>
 
-<!-- Bait 3 (Chorus) -->
-<p>
+
+                    <!-- BAIT 2 -->
+                    <blockquote>
+                        <p>
+                            'Cause it all means nothing, my dear<br>
+                            If I can't be holding you near<br>
+                            So tell me you love me<br>
+                            'Cause that's all that I need to hear
+                        </p>
+                    </blockquote>
+
+
+                    <!-- BAIT 3 -->
+                    <p>
                         I sit in my kitchen<br>
                         With nothing to eat<br>
                         With so many friends I<br>
@@ -305,68 +415,125 @@ body > table > tbody > tr:last-child small {
                     </p>
 
 
-<!-- Bait 4 (Outro):  -->
-<blockquote>
- <p>
-                        'Cause I don't need music in my ears<br>
-                        I don't need the crowds and the cheers<br>
-                        Oh, just tell me you love me<br>
-                        'Cause that's all that I need to hear
-                    </p>
+                    <!-- BAIT 4 -->
+                    <blockquote>
+                        <p>
+                            'Cause I don't need music in my ears<br>
+                            I don't need the crowds and the cheers<br>
+                            Oh, just tell me you love me<br>
+                            'Cause that's all that I need to hear
+                        </p>
+                    </blockquote>
 
-</blockquote>
-  <P> I've been told so many times before<br>
+
+                    <!-- BAIT 5 -->
+                    <p>
+                        I've been told so many times before<br>
                         But hearing it from you means much more<br>
                         So much more
-                        <P>
-</blockquote
-  <P>Reply to my message<br>
+                    </p>
+
+
+                    <!-- BAIT 6 -->
+                    <p>
+                        Reply to my message<br>
                         And pick up my calls<br>
                         You see, I wrote you a letter<br>
                         It was no use at all
-                        <P>
-</blockquote
-  <P>Oh, I don't care if you're insincere<br>
+                    </p>
+
+
+                    <!-- BAIT 7 -->
+                    <p>
+                        Oh, I don't care if you're insincere<br>
                         Just tell me what I want to hear<br>
                         You know where to find me<br>
                         The place where we lived all these years, oh
-                        <P>
-</blockquote
-  <P> And tell me you love me<br>
+                    </p>
+
+
+                    <!-- BAIT 8 -->
+                    <p>
+                        And tell me you love me<br>
                         That's all that I need to hear<br>
                         Oh, tell me you love me<br>
                         That's all that I need to hear
-                        <P>
+                    </p>
+
+                </div>
 
 
+                <!-- ===== GAMBAR LAGU ===== -->
+                <figure>
 
-                
-            
-                <center>
-                <img src="1975.jpg" width="400">
-                    <p align="right"><small><em>By The 1975</em></small></p>
-                    </center>
-            
+                    <img
+                        src="1975.jpg"
+                        alt="The 1975"
+                        class="song-image"
+                    >
 
-                <!-- Akhir dari content utama -->
+                    <figcaption class="image-caption">
+                        By The 1975
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- ===== AKHIR CONTENT UTAMA ===== -->
+
             </td>
-            <td width="25%" valign="top" bgcolor="white">
+
+
+            <!-- ===== SIDEBAR ===== -->
+            <td class="sidebar">
+
                 <p>Tautan eksternal</p>
-                <ol>
-                    <li><a href="https://reyhan12-debug.github.io/Webdavid/about-me.html">Website Finevarra</a></li>
-                    <li><a href="https://www.github.com">Github</a></li>
-                    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
-                    <li><a href="https://www.w3schools.com">W3Schools</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="right" bgcolor="black">
-                <font color="white"><small>&copy;Finevarra Aulya Naianisya Arianto., 2026.</small></font>
-            </td>
-        </tr>
-    </table>
-    <p>&nbsp;</p>
-</body>
 
+                <ol>
+
+                    <li>
+                        <a href="https://reyhan12-debug.github.io/Webdavid/about-me.html">
+                            Website Finevarra
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.github.com">
+                            Github
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.wikipedia.org">
+                            Wikipedia
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.w3schools.com">
+                            W3Schools
+                        </a>
+                    </li>
+
+                </ol>
+
+            </td>
+
+        </tr>
+
+
+        <!-- ===== FOOTER ===== -->
+        <tr>
+            <td colspan="2" class="footer">
+
+                <small>
+                    &copy; Finevarra Aulya Naianisya Arianto, 2026.
+                </small>
+
+            </td>
+        </tr>
+
+    </table>
+
+</body>
 </html>
