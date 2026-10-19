@@ -1,389 +1,442 @@
+
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tentang Saya</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-  <style>
-        
-/* ===== GLOBAL ===== */
-* {
-    box-sizing: border-box;
-}
 
-body {
-    background: linear-gradient(135deg, #490916, #8e2636);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 25px 15px;
-    line-height: 1.7;
-}
+    <style>
 
-/* ===== CONTAINER WEBSITE ===== */
-table {
-    width: 90%;
-    max-width: 1000px;
-    border: none;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 18px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
-}
+        /* ===== GLOBAL ===== */
+        * {
+            box-sizing: border-box;
+        }
 
-td {
-    border: none;
-    padding: 25px;
-}
-
-/* ===== HEADER ===== */
-table > tbody > tr:first-child > td.header-banner {
-    position: relative;
-    padding: 0;
-    height: 220px;
-    overflow: hidden;
-    background: #650d1b;
-}
-
-/* ===== GAMBAR BANNER ===== */
-.header-banner img {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* ===== POSISI TEKS ===== */
-.header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-}
-
-/* ===== JUDUL WEBSITE ===== */
-
-/* ===== JUDUL DENGAN SHADOW 3D ===== */
-.header-text h1 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 52px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #fff0d6;
-
-    text-shadow:
-        1px 1px 0 #d6ad69,
-        2px 2px 0 #b88a50,
-        3px 3px 0 #80512e,
-        4px 4px 0 #54291f,
-        5px 5px 5px rgba(0,0,0,0.8),
-        8px 8px 15px rgba(0,0,0,0.7),
-        0 0 20px rgba(255,220,170,0.4);
-
-    margin: 0;
-}
+        body {
+            background: linear-gradient(135deg, #490916, #8e2636);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 25px 15px;
+            line-height: 1.7;
+        }
 
 
-/* ===== SUBTITLE ===== */
-.header-text p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 18px;
-    letter-spacing: 3px;
-    color: #f4d9b3;
-    margin-top: 12px;
+        /* ===== CONTAINER WEBSITE ===== */
+        table {
+            width: 90%;
+            max-width: 1000px;
+            border: none;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+        }
 
-    text-shadow:
-        2px 2px 5px rgba(0,0,0,0.9);
-}
-
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 600px) {
-    table > tbody > tr:first-child > td.header-banner {
-        height: 160px;
-    }
-
-    .header-banner img {
-        height: 160px;
-    }
-
-    .header-text h1 {
-        font-size: 28px;
-        letter-spacing: 1px;
-    }
-
-    .header-text p {
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
-}
+        td {
+            border: none;
+            padding: 25px;
+        }
 
 
-/* ===== NAVIGATION MENU ===== */
-table > tbody > tr:nth-child(2) > td {
-    background: #f8f3ec;
-    text-align: center;
-    padding: 22px 12px;
-    border-bottom: 2px solid #d6ad69;
-}
+        /* ===== HEADER ===== */
+        .header-banner {
+            position: relative;
+            padding: 0;
+            height: 220px;
+            overflow: hidden;
+            background: #650d1b;
+        }
 
-/* ===== TOMBOL MENU ===== */
-table > tbody > tr:nth-child(2) a {
-    display: inline-block;
-    background: linear-gradient(145deg, #8e2636, #650d1b);
-    padding: 12px 20px;
-    margin: 5px 7px;
-    border-radius: 10px;
-    border: 1px solid #d6ad69;
 
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
+        /* ===== GAMBAR BANNER ===== */
+        .header-banner img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: center;
+        }
 
-    box-shadow:
-        0 4px 0 #350711,
-        0 7px 12px rgba(0,0,0,0.25);
 
-    transition: all 0.3s ease;
-}
+        /* ===== POSISI TEKS HEADER ===== */
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
 
-/* ===== WARNA TEKS ===== */
-table > tbody > tr:nth-child(2) a font {
-    color: white;
-}
 
-/* ===== EFEK HOVER ===== */
-table > tbody > tr:nth-child(2) a:hover {
-    background: linear-gradient(145deg, #b44b5e, #8e2636);
-    transform: translateY(-3px);
+        /* ===== JUDUL DENGAN SHADOW 3D ===== */
+        .header-text h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 52px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #fff0d6;
+            margin: 0;
 
-    box-shadow:
-        0 6px 0 #350711,
-        0 10px 18px rgba(0,0,0,0.3);
-}
+            text-shadow:
+                1px 1px 0 #d6ad69,
+                2px 2px 0 #b88a50,
+                3px 3px 0 #80512e,
+                4px 4px 0 #54291f,
+                5px 5px 5px rgba(0,0,0,0.8),
+                8px 8px 15px rgba(0,0,0,0.7),
+                0 0 20px rgba(255,220,170,0.4);
+        }
 
-/* ===== EFEK SAAT DIKLIK ===== */
-table > tbody > tr:nth-child(2) a:active {
-    transform: translateY(3px);
-    box-shadow: 0 1px 0 #350711;
-}
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    table > tbody > tr:nth-child(2) a {
-        padding: 10px 12px;
-        font-size: 12px;
-        margin: 5px 3px;
-    }
-}
+        /* ===== SUBTITLE ===== */
+        .header-text p {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: #f4d9b3;
+            margin-top: 12px;
 
-/* ===== MAIN CONTENT ===== */
-table > tbody > tr:nth-child(3) > td:first-child {
-    background: #ffffff;
-    padding: 35px;
-    vertical-align: top;
-}
+            text-shadow:
+                2px 2px 5px rgba(0,0,0,0.9);
+        }
 
-h3 {
-    font-family: Georgia, serif;
-    font-size: 23px;
-    color: #650d1b;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
 
-p {
-    font-size: 15px;
-    line-height: 1.8;
-}
+        /* ===== NAVIGATION MENU ===== */
+        .navigation {
+            background: #f8f3ec;
+            text-align: center;
+            padding: 22px 12px;
+            border-bottom: 2px solid #d6ad69;
+        }
 
-small {
-    color: #888;
-}
 
-hr {
-    border: none;
-    height: 1px;
-    background: #e6d6d6;
-    margin: 35px 0;
-}
+        /* ===== TOMBOL MENU ===== */
+        .navigation a {
+            display: inline-block;
+            background: linear-gradient(145deg, #8e2636, #650d1b);
+            padding: 12px 20px;
+            margin: 5px 7px;
+            border-radius: 10px;
+            border: 1px solid #d6ad69;
 
-/* ===== LINK SELANJUTNYA ===== */
-td:first-child p a {
-    display: inline-block;
-    background: #650d1b;
-    color: white;
-    padding: 9px 20px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
 
-td:first-child p a:hover {
-    background: #a34353;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 12px rgba(101,13,27,0.2);
-}
+            box-shadow:
+                0 4px 0 #350711,
+                0 7px 12px rgba(0,0,0,0.25);
 
-/* ===== SIDEBAR ===== */
-table > tbody > tr:nth-child(3) > td:last-child {
-    background: #f8f3ec;
-    border-left: 1px solid #eadede;
-    padding: 25px;
-}
+            transition: all 0.3s ease;
+        }
 
-table > tbody > tr:nth-child(3) > td:last-child p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #650d1b;
-    border-bottom: 2px solid #d6ad69;
-    padding-bottom: 10px;
-}
 
-ol {
-    padding-left: 22px;
-}
+        /* ===== EFEK HOVER MENU ===== */
+        .navigation a:hover {
+            background: linear-gradient(145deg, #b44b5e, #8e2636);
+            transform: translateY(-3px);
 
-li {
-    margin-bottom: 14px;
-    color: #650d1b;
-}
+            box-shadow:
+                0 6px 0 #350711,
+                0 10px 18px rgba(0,0,0,0.3);
+        }
 
-li a {
-    color: #650d1b;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
 
-li a:hover {
-    color: #b66a40;
-    text-decoration: underline;
-}
+        /* ===== EFEK SAAT DIKLIK ===== */
+        .navigation a:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #350711;
+        }
 
-/* ===== FOOTER ===== */
-table > tbody > tr:last-child > td {
-    background: #350711;
-    text-align: center;
-    padding: 18px;
-}
 
-table > tbody > tr:last-child small {
-    color: #ffffff;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            width: 75%;
+            background: #ffffff;
+            padding: 35px;
+            vertical-align: top;
+        }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
+        h3 {
+            font-family: Georgia, serif;
+            font-size: 23px;
+            color: #650d1b;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
 
-    table {
-        width: 100%;
-    }
+        p {
+            font-size: 15px;
+            line-height: 1.8;
+        }
 
-    h1 {
-        font-size: 26px;
-    }
+        small {
+            color: #888;
+        }
 
-    td {
-        padding: 15px;
-    }
 
-    table > tbody > tr:nth-child(3) > td {
-        display: block;
-        width: 100%;
-    }
+        /* ===== TANGGAL ARTIKEL ===== */
+        .article-date {
+            text-align: right;
+        }
 
-    table > tbody > tr:nth-child(3) > td:last-child {
-        border-left: none;
-        border-top: 2px solid #d6ad69;
-    }
 
-    table > tbody > tr:nth-child(2) a {
-        padding: 6px;
-        font-size: 13px;
-    }
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            width: 25%;
+            background: #f8f3ec;
+            border-left: 1px solid #eadede;
+            padding: 25px;
+            vertical-align: top;
+        }
 
-    h3 {
-        font-size: 20px;
-    }
-}
+        .sidebar p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #650d1b;
+            border-bottom: 2px solid #d6ad69;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ol {
+            padding-left: 22px;
+        }
+
+        .sidebar li {
+            margin-bottom: 14px;
+            color: #650d1b;
+        }
+
+        .sidebar li a {
+            color: #650d1b;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .sidebar li a:hover {
+            color: #b66a40;
+            text-decoration: underline;
+        }
+
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #350711;
+            text-align: center;
+            padding: 18px;
+        }
+
+        .footer small {
+            color: #ffffff;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+
+        /* ===== RESPONSIVE MOBILE ===== */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            td {
+                padding: 15px;
+            }
+
+            /* HEADER MOBILE */
+            .header-banner {
+                height: 160px;
+            }
+
+            .header-banner img {
+                height: 160px;
+            }
+
+            .header-text h1 {
+                font-size: 28px;
+                letter-spacing: 1px;
+            }
+
+            .header-text p {
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+
+            /* NAVIGATION MOBILE */
+            .navigation a {
+                padding: 10px 12px;
+                font-size: 12px;
+                margin: 5px 3px;
+            }
+
+            /* CONTENT MOBILE */
+            .main-content,
+            .sidebar {
+                display: block;
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            /* SIDEBAR MOBILE */
+            .sidebar {
+                border-left: none;
+                border-top: 2px solid #d6ad69;
+            }
+        }
 
     </style>
 </head>
 
-<body bgcolor="maroon" background="images/background.svg">
-    <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
-    <p>&nbsp;</p>
-    <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
-        <!-- HEADER -->
-<tr>
-    <td colspan="2" class="header-banner">
-        <img src="banner.jpg" alt="Banner Website Finevarra">
 
-        <div class="header-text">
-            <h1>Website Finevarra</h1>
-            <p>things about me.</p>
-        </div>
-    </td>
-</tr>
+<body>
 
+    <!-- ===== CONTAINER WEBSITE ===== -->
+    <table align="center">
+
+
+        <!-- ===== HEADER ===== -->
         <tr>
-            <td colspan="2" bgcolor="white">
-                <a href="index.html">Beranda</a> |
-                <a href="tentang-saya.html">Tentang Saya</a> |
-                <a href="sekolah-ku.html">Sekolahku</a> |
+            <td colspan="2" class="header-banner">
+
+                <img src="banner.jpg" alt="Banner Website Finevarra">
+
+                <div class="header-text">
+                    <h1>Website Finevarra</h1>
+                    <p>things about me.</p>
+                </div>
+
+            </td>
+        </tr>
+
+
+        <!-- ===== MENU NAVIGASI ===== -->
+        <tr>
+            <td colspan="2" class="navigation">
+
+                <a href="index.html">Beranda</a>
+
+                <a href="tentang-saya.html">Tentang Saya</a>
+
+                <a href="sekolah-ku.html">Sekolahku</a>
+
                 <a href="syair-lagu.html">Syair Lagu</a>
+
             </td>
         </tr>
-        <tr>
-            <td width="75%">
-                <!-- Content utama -->
 
-               <h3 align="center">Tentang Saya</h3>
-                <p align="right"><small><em>Jumat, 25 September 2026</em></small></p>
-                <p>Saya adalah siswi kelas 11 SMK yang mengambil jurusan
-                        Desain Komunikasi Visual (DKV). Saya memiliki ketertarikan
-                       <P> pada dunia teknologi, desain, dan pembuatan konten digital.
-                        Selain belajar, saya juga senang mengikuti berbagai kegiatan,
-                        membuat video, mengedit, berbicara di depan umum, serta
-                        mencoba hal-hal baru.<P> Website ini saya buat sebagai tempat
-                       <P>untuk memperkenalkan diri dan membagikan sedikit tentang
-                        diri, sekolah, serta hal-hal yang saya sukai.<P>
-                     
-                </ul>
-              
-                <!-- Akhir dari content utama -->
+
+        <!-- ===== ISI WEBSITE ===== -->
+        <tr>
+
+            <!-- ===== CONTENT UTAMA ===== -->
+            <td class="main-content">
+
+                <h3 align="center">Tentang Saya</h3>
+
+                <p class="article-date">
+                    <small>
+                        <em>Jumat, 25 September 2026</em>
+                    </small>
+                </p>
+
+                <p>
+                    Saya adalah siswi kelas 11 SMK yang mengambil
+                    jurusan Desain Komunikasi Visual (DKV).
+                    Saya memiliki ketertarikan pada dunia
+                    teknologi, desain, dan pembuatan konten digital.
+                </p>
+
+                <p>
+                    Selain belajar, saya juga senang mengikuti
+                    berbagai kegiatan, membuat video, mengedit,
+                    berbicara di depan umum, serta mencoba
+                    hal-hal baru.
+                </p>
+
+                <p>
+                    Website ini saya buat sebagai tempat untuk
+                    memperkenalkan diri dan membagikan sedikit
+                    tentang diri, sekolah, serta hal-hal
+                    yang saya sukai.
+                </p>
+
+                <!-- ===== AKHIR CONTENT UTAMA ===== -->
+
             </td>
-            <td width="25%" valign="top" bgcolor="white">
+
+
+            <!-- ===== SIDEBAR ===== -->
+            <td class="sidebar">
+
                 <p>Tautan eksternal</p>
-                <ol>
-                    <li><a href="https://reyhan12-debug.github.io/Webdavid/">Website Finevarra</a></li>
-                    <li><a href="https://www.github.com">Github</a></li>
-                    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
-                    <li><a href="https://www.w3schools.com">W3Schools</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="right" bgcolor="black">
-                <font color="white"><small>&copy; Finevarra Aulya Naianisya Arianto., 2026.</small></font>
-            </td>
-        </tr>
-    </table>
-    <p>&nbsp;</p>
-</body>
 
+                <ol>
+                    <li>
+                        <a href="https://finevarraarianto.github.io/FinevarraAriantoo/index.html">
+                            Website Finevarra
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.github.com">
+                            Github
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.wikipedia.org">
+                            Wikipedia
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.w3schools.com">
+                            W3Schools
+                        </a>
+                    </li>
+                </ol>
+
+            </td>
+
+        </tr>
+
+
+        <!-- ===== FOOTER ===== -->
+        <tr>
+            <td colspan="2" class="footer">
+
+                <small>
+                    &copy; Finevarra Aulya Naianisya Arianto, 2026.
+                </small>
+
+            </td>
+        </tr>
+
+    </table>
+
+</body>
 </html>
